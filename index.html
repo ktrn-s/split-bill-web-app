@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+        <title>Splitting living cost for roommates</title>
+    </head>
+    <body>
+        <div id="container">
+        <form>
+            <h1>Lets split living cost together!</h1>
+            <p id="par">Making roommate life better</p>
+        </form>
+        <form class="rowForm">
+            <span>
+                <h4>Add the rent amount here:</h4>
+                <input id="rent" type="text" placeholder="Type rent...">
+            </span>
+            <span >
+                <h4>How many roommates?</h4>
+                <input id="pplAmount" type="text" placeholder="Add amount of people....">
+            </span>
+        </form>  
+        <form class="rowForm">
+            <span>
+                <p class="parTwo">Electricity bill: </p>
+                <input id="Electric" type="text" placeholder="Electric bill...">
+            </span>
+            <span>
+                <p class="parTwo">Gas bill:</p>
+                <input id="gas" type="text" placeholder="Gas bill...">
+            </span>
+            <span>
+                <p class="parTwo">WiFi bill:</p>
+                <input id="wifi" type="text" placeholder="WiFi bill...">
+            </span>
+        </form>
+    <br>
+        <p id="par">Would like to contribute to saving funds for new furniture, etc.?</p>
+        <form class="rowForm">
+            <select id="savings">
+                <option disabled>Select an option</option>
+                <option value="0.05" selected>5% percent from your total</option>
+                <option value="0.10">10% percent from your total</option>
+                <option value="0.20">20% percent from your total</option>
+                <option value="0.00" >Pass</option>
+            </select>
+            <br>
+            <button id="addToSavings" >
+                Add
+            </button>
+        </form>
+        <button id="calculate">
+            Calculate
+        </button>
+        <div id="showAmountToPay" >
+            <div id="SplitRent">
+                <p>Rent</p>
+                <span>$</span>
+                <span id="ShowDividedRent" ></span>
+                <span>per person</span>
+            </div>
+            <div id="SplitBills">
+                <p>Bills</p>
+                <span>$</span>
+                <span id="ShowDividedBills" ></span>
+                <span>per person</span>
+            </div>
+            <div id="savingsPerPerson">
+                <p>Savings</p>
+                <span>$</span>
+                <span id="ShowDividedSavings" ></span> 
+                <span>per person</span>
+            </div>
+            <div id="total">
+                <p>Total</p>
+                <span>$</span>
+                <span id="ShowDividedTotal" ></span>
+                <span>per person</span>
+            </div>
+        </div>
+    </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script src="script.js" ></script>
+    </body>
+</html>

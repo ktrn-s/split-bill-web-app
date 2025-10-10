@@ -1,0 +1,235 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    background-image: url(https://images.unsplash.com/photo-1604509082195-1d60a05fbe1e?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    background-position: center right ;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-color: #111207f2;
+    margin: 0;
+}
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: -1;
+}
+
+#container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-width: 700px;
+    background-color: rgba(23, 29, 19, 0.85);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    color: #f9f9f9;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin: 60px auto;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255,255,255,0.2);
+}
+
+.rowForm {
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "Montserrat", sans-serif;
+    padding: 10px;
+}
+h1 {
+    font-weight: 700;
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    color: #f7c873; 
+}
+
+h4, .parTwo {
+    font-weight: 500;
+    color: #f2f2f2;
+    margin-right: 2rem;
+}
+
+#par {
+    font-style: italic;
+    color: #f7c873;
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+.parTwo {
+    font-family: "Montserrat", sans-serif;
+}
+
+input, #Electric, #gas, #wifi {
+    font-family: "Montserrat", sans-serif;
+    width: 75%;
+    padding: 7px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.129);
+    color: #fff;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+    border-radius: 8px;
+}
+input:focus, #Electric:focus, #gas:focus, #wifi:focus{
+    background-color: rgba(255, 255, 255, 0.25);
+    border-color: #f7c873;
+    outline: none;
+}
+#savings {
+    display: none;
+    width: 50%;
+    align-self: start;
+    background-color: rgba(253, 228, 195, 0.7);
+    font-family: 'Montserrat', sans-serif;
+    padding: 5px;
+}
+#calculate, #addToSavings {
+    font-family: "Montserrat", sans-serif;
+    background-color: #f7c873;
+    color: #1e1e1e;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+#addToSavings{
+    width: 15%;
+    border-radius: 10px;
+    padding: 5px 8px;
+}
+#calculate {
+    width: 100%;
+    font-weight: 600;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+#calculate:hover, #addToSavings:hover {
+    background-color: #ffdb99;
+    transform: scale(1.04);
+}
+
+#showAmountToPay {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+#SplitRent, #SplitBills,#savingsPerPerson, #total {
+    font-family: "Montserrat", sans-serif;
+    width: 20%;
+    padding: 10px;
+    margin:0px 10px 10px 0px;
+    border-radius: 10px;
+    text-align: center;
+    flex: 1;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    letter-spacing: 0.5px;
+    box-shadow: 0 0 8px rgba(0,0,0,0.1);
+}
+
+#total {
+    background-color: rgba(185, 151, 76, 0.3); 
+    box-shadow: 0 0 10px rgba(185, 150, 76, 0.278);
+}
+
+@media all and (max-width: 900px){
+    body {
+        background-position: top ;
+        background-size: cover;
+    }
+
+    #container {
+        width: 85%;
+        padding: 20px;
+        border-radius: 1.2rem;
+    }
+    h1 {
+        font-size: 1.8rem;
+    }
+    input {
+        width: 60%;
+        text-align: left;
+    }
+    #addToSavings {
+        padding: 8px;
+        font-family: "Montserrat", sans-serif;
+        border-radius: 10px;
+        margin-top: 8px;
+    }
+    #calculate {
+        font-size: 17px;
+        width: 35%;
+    }
+    #savings {
+     width: 60%; 
+     margin-top: 10px; 
+   }
+    #showAmountToPay {
+        justify-content: space-evenly;
+    }
+}
+
+@media all and (max-width: 500px){
+    body {
+        background-position: top center;
+        background-attachment: fixed;
+    }
+    
+    #container {
+        padding: 15px;
+        width: 90%;
+        padding: 18px;
+        border-radius: 20px;
+    }
+    h1 {
+        font-size: 22px;
+        margin-bottom: 10px;
+    }
+    #SplitRent, #SplitBills,#savingsPerPerson, #total {
+        width: 25%;
+        padding: 10px;
+        margin-bottom:10px ;
+        font-size: 13px;
+    }
+
+    .rowForm  {
+        flex-direction: column;
+    }
+
+    #calculate {
+        width: 60%;
+        font-size: 14px;
+        margin-top: 12px;
+        padding: 10px;
+    }
+
+    #par {
+        font-size: 12px;
+        margin: 0px;
+    }
+    .parTwo, h4 {
+        font-size: 14px;
+    }
+    
+    input, #Electric, #gas, #wifi {
+        font-size: 13px;
+        padding: 8px;
+        width: 90%;
+    }
+}    
+
+
+
+
+
+
+
+
+
+
+
