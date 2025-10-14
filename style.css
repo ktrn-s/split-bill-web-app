@@ -151,7 +151,8 @@ input:focus, #Electric:focus, #gas:focus, #wifi:focus{
 }
 
 #total {
-    background-color: rgba(185, 151, 76, 0.3); 
+    background-color: rgba(88, 99, 68, 0.7);
+    /* background-color: rgba(185, 151, 76, 0.3);  */
     box-shadow: 0 0 10px rgba(185, 150, 76, 0.278);
 }
 
@@ -181,7 +182,7 @@ input:focus, #Electric:focus, #gas:focus, #wifi:focus{
     }
     #calculate {
         font-size: 17px;
-        width: 35%;
+        width: 100%;
     }
     #savings {
         width: 60%; 
