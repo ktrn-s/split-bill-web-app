@@ -1,12 +1,37 @@
+
+
 const button = document.querySelector("#calculate");
 button.addEventListener("click", calculateAmount);
 
 const buttonSavings = document.querySelector("#addToSavings");
 buttonSavings.addEventListener("click", showSavings);
 
+const resetBtn = document.querySelector("#reset");
+resetBtn.addEventListener("click", resetAll);
+
+function resetAll() {
+    document.querySelector("#rent").value = "";
+    document.querySelector("#gas").value = "";
+    document.querySelector("#Electric").value = "";
+    document.querySelector("#wifi").value = "";
+    document.querySelector("#pplAmount").value = "";
+    document.querySelector("#savings").style.display = "none";
+
+    document.querySelector("#ShowDividedRent").textContent = "";
+    document.querySelector("#ShowDividedBills").textContent = "";
+    document.querySelector("#ShowDividedSavings").textContent = "";
+    document.querySelector("#ShowDividedTotal").textContent = "";
+}
+
+document.addEventListener("keydown", function(e){
+    if(e.key === "enter"){
+        e.preventDefault();
+        calculateAmount(e);
+    }
+})
+
 function showSavings(e) {
     e.preventDefault();
-
     savings.style.display = "block";
 }
 
@@ -24,6 +49,11 @@ function calculateAmount(e) {
             icon: "error",
             title: "Error!",
             text: "Please enter correct information!",
+            background: "rgba(23, 29, 19, 0.95)",  
+            color: "#f9f9f9",                      
+            confirmButtonColor: "#f7c873",         
+            iconColor: "#f7c873",                  
+            backdrop: `rgba(0,0,0,0.4)`
             });
     }
 
