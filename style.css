@@ -221,7 +221,6 @@ input:focus, #Electric:focus, #gas:focus, #wifi:focus{
     }
 
     #calculate {
-        width: 60%;
         font-size: 14px;
         margin-top: 12px;
         padding: 10px;
