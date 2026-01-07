@@ -25,6 +25,8 @@ https://splitrentcost.netlify.app/
 
 Screenshot
 
+![Split Bill App Screenshot](./SplitRent.png)
+
 Technologies Used
 
 - JavaScript
@@ -47,4 +49,3 @@ One of the main challenges in this project was implementing the necessary JavaSc
 This experience helped strengthen my understanding of JavaScript methods and real-world problem solving.
 
 I plan to expand and improve these features in future projects.
-
