@@ -1,6 +1,6 @@
 gsap.from("#container", {duration:1.2, opacity:0, y:-60, ease: "power1.out"});
 gsap.from("h1", {duration: 1, opacity:0, y: -30, delay: 0.6});
-gsap.from("#par", {duration: 1, opacity: 0, delay: 1.5 });
+gsap.from(".par", {duration: 1, opacity: 0, delay: 1.5 });
 gsap.from(".rowForm", { duration: 0.8, opacity: 0, y:-20, stagger: 0.2, delay:0.8 });
 gsap.from("#showAmountToPay",{ duration: 0.8, opacity:0, y:20, stagger: 0.1, ease: "power1.out"});
 

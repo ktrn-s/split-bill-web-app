@@ -52,7 +52,7 @@ h4, .parTwo {
     margin-right: 2rem;
 }
 
-#par {
+.par {
     font-style: italic;
     color: #f7c873;
     font-size: 1rem;
@@ -226,7 +226,7 @@ input:focus, #Electric:focus, #gas:focus, #wifi:focus{
         padding: 10px;
     }
 
-    #par {
+    .par {
         font-size: 12px;
         margin: 0px;
     }
